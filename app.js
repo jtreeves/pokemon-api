@@ -41,9 +41,12 @@ function makePokemonCard(pokemon) {
     nameElement.classList.add('card-title');
     nameElement.textContent = pokemon.name;
     // Create p tag, add class, add text
-    const heightWeight = document.createElement('p')
-    heightWeight.classList.add('card-text');
-    heightWeight.textContent = `Height: ${pokemon.height}, Weight: ${pokemon.weight}`;
+    const height = document.createElement('p')
+    height.classList.add('card-text');
+    height.textContent = `Height: ${pokemon.height}`;
+    const weight = document.createElement('p')
+    weight.classList.add('card-text');
+    weight.textContent = `Weight: ${pokemon.weight}`;
     const move = document.createElement('p')
     move.classList.add('card-text');
     move.textContent = `Move: ${pokemon.move}`;
@@ -57,7 +60,8 @@ function makePokemonCard(pokemon) {
     purchaseLink.textContent = `Buy ${pokemon.name} card`;
     // Append to card-body div
     cardBody.appendChild(nameElement);
-    cardBody.appendChild(heightWeight);
+    cardBody.appendChild(height);
+    cardBody.appendChild(weight);
     cardBody.appendChild(move);
     cardBody.appendChild(ability);
     cardBody.appendChild(purchaseLink);
